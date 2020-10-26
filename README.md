@@ -471,4 +471,4 @@ Once you have your program working as expected, challenge yourself. Can you add 
 
 You can also put your refactoring skills to work. Take a closer look at the `get_character_movies_from_api` method. Does it look kind of long to you? Can you split it up into one or two helper methods?
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/apis-and-iteration'>Apis And Iteration</a> on Learn.co and start learning to code for free.</p>
+
