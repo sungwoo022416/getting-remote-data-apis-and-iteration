@@ -9,8 +9,11 @@ def get_character_movies_from_api(character_name)
   response_string = RestClient.get('http://swapi.dev/api/people')
   response_hash = JSON.parse(response_string)
 
-  sorted_character = response_hash["results"].detect {|character| character["name"].downcase == character_name}
-
+  sorted_character = response_hash["results"].detect {|character| character["name"].downcase == character_name} 
+  if sorted_character.nil?
+    raise "Can't Find the Character Name!"
+  end
+  
   sorted_character["films"].map do |film_url|
     film_response = RestClient.get(film_url)
     JSON.parse(film_response)
